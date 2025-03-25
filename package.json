@@ -1,0 +1,78 @@
+{
+    "name": "react-material-ui-carousel",
+    "version": "3.5.0",
+    "license": "MIT",
+    "description": "A Generic, extendible Carousel UI component for React using Material UI",
+    "homepage": "https://learus.github.io/react-material-ui-carousel",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Learus/react-material-ui-carousel"
+    },
+    "keywords": [
+        "react",
+        "material",
+        "material ui",
+        "carousel",
+        "gallery"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "babel": {
+        "presets": [
+            "react",
+            "env",
+            "stage-2"
+        ]
+    },
+    "scripts": {
+        "build": "npx rimraf dist && npm run build:cjs",
+        "build:cjs": "tsc --module commonjs --outDir dist",
+        "build_old": "NODE_ENV=production && npx rimraf dist && npx mkdirp dist && npx babel ./src --out-dir dist --copy-files"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "dependencies": {
+        "@emotion/react": "^11.4.1",
+        "@emotion/styled": "^11.3.0",
+        "@mui/icons-material": "^6.4.7",
+        "@mui/material": "^6.4.7",
+        "@mui/system": "^6.4.7",
+        "framer-motion": "^12.5.0",
+        "react-material-ui-carousel": "file:"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^0.0.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.13.0",
+        "gh-pages": "^6.3.0",
+        "react-scripts": "^3.0.1",
+        "typescript": "^5.8.2"
+    },
+    "peerDependencies": {
+        "@emotion/react": "^11.4.1",
+        "@emotion/styled": "^11.3.0",
+        "@mui/icons-material": "^6.4.7",
+        "@mui/material": "^6.4.7",
+        "@mui/system": "^6.4.7",
+        "react": "^18.0.0 || ^19.0.0",
+        "react-dom": "^18.0.0 || ^19.0.0"
+    }
+}
