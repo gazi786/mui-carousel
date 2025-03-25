@@ -43,44 +43,40 @@ npm install react-material-ui-carousel@v2mui5 --save
 ## Usage Example
 
 ```jsx
-import React from 'react';
-import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@mui/material'
+import React from "react";
+import Carousel from "react-material-ui-carousel";
+import { Paper, Button } from "@mui/material";
 
-function Example(props)
-{
-    var items = [
-        {
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!"
-        },
-        {
-            name: "Random Name #2",
-            description: "Hello World!"
-        }
-    ]
+function Example(props) {
+  var items = [
+    {
+      name: "Random Name #1",
+      description: "Probably the most random thing you have ever seen!",
+    },
+    {
+      name: "Random Name #2",
+      description: "Hello World!",
+    },
+  ];
 
-    return (
-        <Carousel>
-            {
-                items.map( (item, i) => <Item key={i} item={item} /> )
-            }
-        </Carousel>
-    )
+  return (
+    <Carousel>
+      {items.map((item, i) => (
+        <Item key={i} item={item} />
+      ))}
+    </Carousel>
+  );
 }
 
-function Item(props)
-{
-    return (
-        <Paper>
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
+function Item(props) {
+  return (
+    <Paper>
+      <h2>{props.item.name}</h2>
+      <p>{props.item.description}</p>
 
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
-    )
+      <Button className="CheckButton">Check it out!</Button>
+    </Paper>
+  );
 }
 ```
 
@@ -114,11 +110,11 @@ Note: `onChange` works in a similar fashion. See [Props](#props) below.
 
 These are the props that are used to directly customize the Carousel's default buttons:
 
-* NextIcon
-* PrevIcon
-* navButtonsProps
-* navButtonsWrapperProps
-* fullHeightHover
+- NextIcon
+- PrevIcon
+- navButtonsProps
+- navButtonsWrapperProps
+- fullHeightHover
 
 #### Example #1
 
@@ -141,7 +137,7 @@ import RandomIcon from '@@mui/icons-material/Random'; // Note: this doesn't exis
 </Carousel>
 ```
 
-The `NextIcon` and `PrevIcon` is of type `ReactNode`, meaning it can be any JSX element or a string. *Note: Extra styling may be needed when using those props*.
+The `NextIcon` and `PrevIcon` is of type `ReactNode`, meaning it can be any JSX element or a string. _Note: Extra styling may be needed when using those props_.
 
 #### Example #2
 
@@ -158,13 +154,13 @@ A very important note here, is that any styles specified by the user **DO NOT OV
             backgroundColor: 'cornflowerblue',
             borderRadius: 0
         }
-    }} 
+    }}
     navButtonsWrapperProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
         style: {
             bottom: '0',
             top: 'unset'
         }
-    }} 
+    }}
     NextIcon='next'             // Change the "inside" of the next button to "next"
     PrevIcon='prev'             // Change the "inside of the prev button to "prev"
 >
@@ -172,7 +168,7 @@ A very important note here, is that any styles specified by the user **DO NOT OV
 </Carousel>
 ```
 
-Of course, extra styling to the button wrappers, or indicators might be needed to achieve exactly what we may be looking for. *Note: You can also use `className` to change the styles externally*.
+Of course, extra styling to the button wrappers, or indicators might be needed to achieve exactly what we may be looking for. _Note: You can also use `className` to change the styles externally_.
 
 ### Customizing the navigation buttons directly
 
@@ -201,11 +197,11 @@ import {Button} from '@mui/material';
 
 ##### Parameters Explanation
 
-* `onClick`: The function that handles actual navigation. If you do not add this to your component, the buttons will not work.
-* `className`: The className given by the carousel component. This is used to handle Visible/Invisible, hover, and user specified styles (e.g. from navButtonProps). Apply it to the outmost element.
-* `style`: The style given by the carousel component. Used to give any user specified styles (e.g. from navButtonProps).
-* `next`: Boolean value that specifies whether this is the next button.
-* `prev`: Boolean value that specifies whether this is the prev button.
+- `onClick`: The function that handles actual navigation. If you do not add this to your component, the buttons will not work.
+- `className`: The className given by the carousel component. This is used to handle Visible/Invisible, hover, and user specified styles (e.g. from navButtonProps). Apply it to the outmost element.
+- `style`: The style given by the carousel component. Used to give any user specified styles (e.g. from navButtonProps).
+- `next`: Boolean value that specifies whether this is the next button.
+- `prev`: Boolean value that specifies whether this is the prev button.
 
 The prop value must be a function that returns a component. All parameters are optional as far as styling goes (**not functionality**), but it is advised you use them as shown above.  
 As implied, any `className`s or `style`s specified in the navButtonsProps will only be used iff you apply the given `className` and `style` parameters.
@@ -214,10 +210,10 @@ As implied, any `className`s or `style`s specified in the navButtonsProps will o
 
 There are 4 props that handle indicator customization
 
-* IndicatorIcon
-* activeIndicatorIconButtonProps
-* indicatorIconButtonProps
-* indicatorContainerProps
+- IndicatorIcon
+- activeIndicatorIconButtonProps
+- indicatorIconButtonProps
+- indicatorContainerProps
 
 #### Example
 
@@ -235,16 +231,15 @@ import Home from '@mui/icons-material/Home';
 </Carousel>
 ```
 
-The `IndicatorIcon`  works the same way as the `NextIcon` and `PrevIcon` prop.
-
+The `IndicatorIcon` works the same way as the `NextIcon` and `PrevIcon` prop.
 
 #### Example #2
 
 Let's say we would like to have an array to icons like numbers, to order the elements of my carousel numerically. Let's do this!
- 
+
 ```jsx
-const anArrayOfNumbers = [<img src="http://random.com/one"/>, 
-                          <img src="http://random.com/two"/>, 
+const anArrayOfNumbers = [<img src="http://random.com/one"/>,
+                          <img src="http://random.com/two"/>,
                           <img src="http://random.com/three"/>
                          ];
 
@@ -377,7 +372,7 @@ Giving the default styles in pseudo-code.
         fontSize: "15px",
     },
     // Applies to the active indicator
-    active: {           
+    active: {
         color: "#494949"
     }
 }
@@ -389,8 +384,8 @@ Giving the default styles in pseudo-code.
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | sx                             | `SxProps<Theme>`                                                                                                                                           | `{}`                                                                      | Defines `sx` props, that will be **inserted** into the Carousel 's root element                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | className                      | `string`                                                                                                                                                   | ""                                                                        | Defines custom class name(s), that will be **added** to Carousel element                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| height                         | `number \| string`                                                                                                                                         | `undefined`                                                               | Defines the carousel's height in `px`. If this is not set, the carousel's height will be the height of its children. If it is not set, the carousel's height will be the same as the current active child.                                                                                                                                                                                                                                                                                                                                                                                                            |
-| index                          | `number`                                                                                                                                                   | `0`                                                                       | Defines which child (assuming there are more than 1 children) will be displayed. Next and Previous Buttons as well as Indicators will work normally after the first render. When this prop is updated the carousel will display the chosen child. *Use this prop to programmatically set the active child*. If (index > children.length) then if (strictIndexing) index = last element. index                                                                                                                                  |
+| height                         | `number \| string`                                                                                                                                         | `undefined`                                                               | Defines the carousel's height in `px`. If this is not set, the carousel's height will be the height of its children. If it is not set, the carousel's height will be the same as the current active child.                                                                                                                                                                                                                                                                                                                     |
+| index                          | `number`                                                                                                                                                   | `0`                                                                       | Defines which child (assuming there are more than 1 children) will be displayed. Next and Previous Buttons as well as Indicators will work normally after the first render. When this prop is updated the carousel will display the chosen child. _Use this prop to programmatically set the active child_. If (index > children.length) then if (strictIndexing) index = last element. index                                                                                                                                  |
 | strictIndexing                 | `boolean`                                                                                                                                                  | `true`                                                                    | Defines whether index can be bigger than children length                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | autoPlay                       | `boolean`                                                                                                                                                  | `true`                                                                    | Defines if the component will auto scroll between children                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | stopAutoPlayOnHover            | `boolean`                                                                                                                                                  | `true`                                                                    | Defines if auto scrolling will continue while mousing over carousel                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -403,10 +398,10 @@ Giving the default styles in pseudo-code.
 | navButtonsAlwaysInvisible      | `boolean`                                                                                                                                                  | `false`                                                                   | Defines if the next/previous buttons will always be invisible or not                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | cycleNavigation                | `boolean`                                                                                                                                                  | `true`                                                                    | Defines if the next button will be visible on the last slide, and the previous button on the first slide. Auto-play also stops on the last slide. Indicators continue to work normally.                                                                                                                                                                                                                                                                                                                                        |
 | fullHeightHover                | `boolean`                                                                                                                                                  | `true`                                                                    | Defines if the the next/previous button wrappers will cover the full **height** of the Item element and show buttons on full height hover                                                                                                                                                                                                                                                                                                                                                                                      |
-| navButtonsWrapperProps         | `{className: string, style: React.CSSProperties} & React.AriaAttributes`                                                                                   | `undefined`                                                               | Used to customize the div surrounding the nav `IconButtons`. Use this to position the buttons onto, below, outside, e.t.c. the carousel. *Tip*: Check the [default styles](#default-styles) below.                                                                                                                                                                                                                                                                                                                             |
+| navButtonsWrapperProps         | `{className: string, style: React.CSSProperties} & React.AriaAttributes`                                                                                   | `undefined`                                                               | Used to customize the div surrounding the nav `IconButtons`. Use this to position the buttons onto, below, outside, e.t.c. the carousel. _Tip_: Check the [default styles](#default-styles) below.                                                                                                                                                                                                                                                                                                                             |
 | navButtonsProps                | `{className: string, style: React.CSSProperties} & React.AriaAttributes`                                                                                   | `undefined`                                                               | Used to customize the actual nav `IconButton`s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | NextIcon                       | `ReactNode`                                                                                                                                                | `<NavigateNextIcon/>`                                                     | Defines the element inside the nav "next" `IconButton`. Refer to [MaterialUI Button Documentation](https://material-ui.com/components/buttons/) for more examples. It is advised to use Material UI Icons, but you could use any element (`<img/>`, `<div/>`, ...) you like.                                                                                                                                                                                                                                                   |
-| PrevIcon                       | `ReactNode`                                                                                                                                                | `<NavigateNextIcon/>`                                                     | Defines the element inside the nav "prev" `IconButton`. Refer to [MaterialUI Button Documentation](https://material-ui.com/components/buttons/) for more examples.  It is advised to use Material UI Icons, but you could use any element (`<img/>`, `<div/>`, ...) you like.                                                                                                                                                                                                                                                  |
+| PrevIcon                       | `ReactNode`                                                                                                                                                | `<NavigateNextIcon/>`                                                     | Defines the element inside the nav "prev" `IconButton`. Refer to [MaterialUI Button Documentation](https://material-ui.com/components/buttons/) for more examples. It is advised to use Material UI Icons, but you could use any element (`<img/>`, `<div/>`, ...) you like.                                                                                                                                                                                                                                                   |
 | NavButton                      | `({onClick, className, style, prev, next}: {onClick: Function, className: string, style: React.CSSProperties, next: boolean, prev: boolean}) => ReactNode` | `undefined`                                                               | Gives full control of the nav buttons. Should return a button that uses the given `onClick`. Works in tandem with all other customization options (`navButtonsProps`, `navButtonsWrapperProps`, `navButtonsAlwaysVisible`, `navButtonsAlwaysInvisible`, `fullHeightHover`, ...). Refer to the [example section](README.md#CustomizingNavigation) for more information.                                                                                                                                                         |
 | indicatorIconButtonProps       | `{className: string, style: React.CSSProperties} & React.AriaAttributes`                                                                                   | `undefined`                                                               | Used to customize **all** indicator `IconButton`s. Additive to `activeIndicatorIconButtonProps`. Any `aria-label` property used will be rendered with the indicator index next to it. e.g. `{'aria-label': 'indicator'}` --> `'indicator 1'`                                                                                                                                                                                                                                                                                   |
 | activeIndicatorIconButtonProps | `{className: string, style: React.CSSProperties} & React.AriaAttributes`                                                                                   | `undefined`                                                               | Used to customize the **active** indicator `IconButton`. Additive to `indicatorIconButtonProps`.                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -421,6 +416,6 @@ Giving the default styles in pseudo-code.
 
 The MIT License.
 
-## Author
+## Original Author
 
 [Learus](https://learus.github.io)
