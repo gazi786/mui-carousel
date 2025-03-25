@@ -1,6 +1,6 @@
 {
-  "name": "react-material-ui-carousel-demo",
-  "version": "2.0.1",
+  "name": "mui-carousel-demo",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://learus.github.io/react-material-ui-carousel",
   "dependencies": {
@@ -15,7 +15,6 @@
     "framer-motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-material-ui-carousel": "file:../react-material-ui-carousel-3.5.0.tgz",
     "react-material-ui-carousel-demo": "file:",
     "react-scripts": "^5.0.1"
   },

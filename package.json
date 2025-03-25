@@ -1,13 +1,7 @@
 {
-    "name": "mui-carousel",
-    "version": "3.5.0",
-    "license": "MIT",
+    "name": "mui-carousel-react",
+    "version": "1.0.1",
     "description": "A Generic, extendible Carousel UI component for React using Material UI",
-    "homepage": "https://learus.github.io/react-material-ui-carousel",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/gazi786/mui-carousel"
-    },
     "keywords": [
         "react",
         "material",
@@ -15,48 +9,39 @@
         "carousel",
         "gallery"
     ],
+    "homepage": "https://learus.github.io/react-material-ui-carousel",
+    "bugs": {
+        "url": "https://github.com/gazi786/mui-carousel/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gazi786/mui-carousel.git"
+    },
+    "license": "MIT",
+    "author": "AG",
+    "type": "commonjs",
     "main": "dist/index.js",
-    "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
         "/dist"
     ],
-    "babel": {
-        "presets": [
-            "react",
-            "env",
-            "stage-2"
-        ]
-    },
     "scripts": {
         "build": "npx rimraf dist && npm run build:cjs",
         "build:cjs": "tsc --module commonjs --outDir dist",
         "build_old": "NODE_ENV=production && npx rimraf dist && npx mkdirp dist && npx babel ./src --out-dir dist --copy-files"
     },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
     "dependencies": {
         "@emotion/react": "^11.4.1",
         "@emotion/styled": "^11.3.0",
+        "@gazi786/mui-carousel": "file:",
         "@mui/icons-material": "^6.4.7",
         "@mui/material": "^6.4.7",
         "@mui/system": "^6.4.7",
         "framer-motion": "^12.5.0",
         "mui-carousel": "file:",
-        "react-material-ui-carousel": "file:"
+        "mui-carousel-react": "file:",
+        "react-material-ui-carousel": "file:",
+        "react-mui-carousel": "file:"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
@@ -75,5 +60,28 @@
         "@mui/system": "^6.4.7",
         "react": "^18.0.0 || ^19.0.0",
         "react-dom": "^18.0.0 || ^19.0.0"
+    },
+    "module": "dist/index.js",
+    "babel": {
+        "presets": [
+            "react",
+            "env",
+            "stage-2"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     }
 }
