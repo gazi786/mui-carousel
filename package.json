@@ -1,6 +1,6 @@
 {
     "name": "mui-carousel-react",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A Generic, extendible Carousel UI component for React using Material UI",
     "keywords": [
         "react",
@@ -19,12 +19,19 @@
     },
     "license": "MIT",
     "author": "AG",
-    "type": "commonjs",
     "main": "dist/index.js",
+    "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
         "/dist"
     ],
+    "babel": {
+        "presets": [
+            "react",
+            "env",
+            "stage-2"
+        ]
+    },
     "scripts": {
         "build": "npx rimraf dist && npm run build:cjs",
         "build:cjs": "tsc --module commonjs --outDir dist",
@@ -57,14 +64,6 @@
         "@mui/system": "^6.4.7",
         "react": "^18.0.0 || ^19.0.0",
         "react-dom": "^18.0.0 || ^19.0.0"
-    },
-    "module": "dist/index.js",
-    "babel": {
-        "presets": [
-            "react",
-            "env",
-            "stage-2"
-        ]
     },
     "eslintConfig": {
         "extends": "react-app"
