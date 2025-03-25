@@ -1,5 +1,5 @@
 {
-  "name": "mui-carousel-demo",
+  "name": "mui-carousel-react-demo",
   "version": "1.0.0",
   "private": true,
   "homepage": "https://learus.github.io/react-material-ui-carousel",
@@ -15,7 +15,7 @@
     "framer-motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-material-ui-carousel-demo": "file:",
+    "mui-carousel-react-demo": "file:",
     "react-scripts": "^5.0.1"
   },
   "resolutions": {

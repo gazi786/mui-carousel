@@ -1,6 +1,6 @@
 {
     "name": "mui-carousel-react",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A Generic, extendible Carousel UI component for React using Material UI",
     "keywords": [
         "react",
@@ -38,10 +38,7 @@
         "@mui/material": "^6.4.7",
         "@mui/system": "^6.4.7",
         "framer-motion": "^12.5.0",
-        "mui-carousel": "file:",
-        "mui-carousel-react": "file:",
-        "react-material-ui-carousel": "file:",
-        "react-mui-carousel": "file:"
+        "mui-carousel-react": "file:"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
