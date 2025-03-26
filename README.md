@@ -27,19 +27,6 @@ npm install @mui/icons-material
 npm install @mui/styles
 ```
 
-### Other Versions
-
-```shell
-# Version 2 with MUI 4
-npm install mui-carousel-react@v2 --save
-npm install @material-ui/core
-npm install @material-ui/icons
-
-
-# Version 2 with MUI 5 support
-npm install mui-carousel-react@v2mui5 --save
-```
-
 ## Usage Example
 
 ```jsx
