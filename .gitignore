@@ -28,7 +28,7 @@ demo/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-react-material-ui-carousel-3.5.0.tgz
+mui-carousel-react-3.5.0.tgz
 demo/.env
 
 #ide
