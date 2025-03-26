@@ -13,7 +13,7 @@ const App = () => {
   const [stars, setStars] = useState<number>(0);
 
   useEffect(() => {
-    const url = "https://api.github.com/repos/learus/mui-carousel-react";
+    const url = "https://api.github.com/repos/gazi786/mui-carousel";
     axios
       .get(url)
       .then((res) => res.data)
@@ -44,7 +44,7 @@ const App = () => {
           </div>
 
           <Typography variant="subtitle1" align="left">
-            Made by &nbsp;
+            Made by and Original Author &nbsp;
             <a
               href="https://github.com/learus"
               target="_blank"
@@ -55,13 +55,23 @@ const App = () => {
           </Typography>
 
           <br />
+          <Typography variant="subtitle1" align="left">
+            Further improvements and upgrades by &nbsp;
+            <a
+              href="https://github.com/gazi786"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learus
+            </a>
+          </Typography>
           <div className="buttonContainer">
             <Button
               startIcon={<GitHub />}
               variant="contained"
               className="github"
               component="a"
-              href="https://github.com/Learus/mui-carousel-react.git"
+              href="https://github.com/gazi786/mui-carousel.git"
               target="_blank"
               rel="noreferrer"
             >
@@ -100,7 +110,7 @@ const App = () => {
               <Typography variant="h4">Links</Typography>
               <Typography>
                 <a
-                  href="https://github.com/Learus/mui-carousel-react/blob/master/README.md"
+                  href="https://github.com/gazi786/mui-carousel/blob/master/README.md"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -109,7 +119,7 @@ const App = () => {
               </Typography>
               <Typography>
                 <a
-                  href="https://github.com/Learus/mui-carousel-react/blob/master/CHANGELOG.md"
+                  href="https://github.com/gazi786/mui-carousel/blob/master/CHANGELOG.md"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -131,34 +141,10 @@ const App = () => {
                 color: DemoTheme.palette.primary.main,
               }}
             >
-              # Latest Release (Version 3 using MUI 5 and framer-motion)
+              # Latest Release (Version 1 using MUI v6 and framer-motion)
             </Typography>
             <Typography style={{ fontFamily: "monospace" }}>
               npm install mui-carousel-react
-            </Typography>
-            <br />
-            <Typography
-              style={{
-                fontFamily: "monospace",
-                color: DemoTheme.palette.primary.main,
-              }}
-            >
-              # Version 2 (Using explicitly MUI 4)
-            </Typography>
-            <Typography style={{ fontFamily: "monospace" }}>
-              npm install mui-carousel-react@v2
-            </Typography>
-            <br />
-            <Typography
-              style={{
-                fontFamily: "monospace",
-                color: DemoTheme.palette.primary.main,
-              }}
-            >
-              # Version 2 (Using explicitly MUI 5)
-            </Typography>
-            <Typography style={{ fontFamily: "monospace" }}>
-              npm install mui-carousel-react@v2mui5
             </Typography>
           </div>
 

@@ -4,15 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog][Keep a Changelog] and this project adheres to [Semantic Versioning][Semantic Versioning].
 
-## [3.4.2 - 3.5.0] - _March 10 2025_
+## [1.0.0 - 1.0.5] - _March 26 2025_
 
-- The carousel now supports React 19 and MUI v6.
+- Version bumped down to version 1. And package chnaged to mui-carousel-react from react-material-ui-carousel.
+
+### Fixed
+
+- The carousel now supports React 19 and MUI v6. (Older version react removed. Compatible with React 18).
+
+## [Borrowing Code Base from Learus]([@learus]) _March 10 2025_
 
 ## [3.4.0 - 3.4.2] - _May 28 2022_
 
 ### Fixed
 
-- Fixes [#issue 173](https://github.com/Learus/mui-carousel-react/issues/173). Problem was caused by framer-motion enter animation div having 0 `height`, and hence making the carousel have 0 `height`, when the animation took a long time to start, or the user was spamming the next button. Now, the library checks for 0 `height`, and retries to set `height` after a few ms until the div's `offsetHeight` isn't 0 anymore. ([@learus])
+- Fixes [#issue 173](https://github.com/Learus/react-material-ui-carousel/issues/173). Problem was caused by framer-motion enter animation div having 0 `height`, and hence making the carousel have 0 `height`, when the animation took a long time to start, or the user was spamming the next button. Now, the library checks for 0 `height`, and retries to set `height` after a few ms until the div's `offsetHeight` isn't 0 anymore. ([@learus])
 
 ### Added
 
@@ -39,7 +45,7 @@ The format is based on [Keep a Changelog][Keep a Changelog] and this project adh
 ### Added
 
 - Added support for sx prop on Carousel container ([@matyas-igor])
-- Now `autoPlay` is paused when carousel is focused using keyboard, hence making the library more accessible. [Issue.](https://github.com/Learus/mui-carousel-react/issues/137) ([@hajineats])
+- Now `autoPlay` is paused when carousel is focused using keyboard, hence making the library more accessible. [Issue.](https://github.com/Learus/react-material-ui-carousel/issues/137) ([@hajineats])
 - Links to contributor profiles on CHANGELOG.md
 
 ### Changed
@@ -74,17 +80,17 @@ In general, its usage does not change.
 - **(Breaking)** Now supports MUI 5 **by default**. Version 3 will not work with MUI 4 as of now. ([@Learus])
   - Hence, minimum React version has been bumped to `^17.0.1`
 - **(Breaking)** Now uses [`framer/motion`](https://github.com/framer/motion) to handle animations and gesture support. More animations will be added in the future. ([@Learus])
-  - "Enter" and "Exit" animations are now simultaneous. No flash/gap of background between slide changes. Fixes issues [20](https://github.com/Learus/mui-carousel-react/issues/20), [61](https://github.com/Learus/mui-carousel-react/issues/61), [66](https://github.com/Learus/mui-carousel-react/issues/66).
-  - The first carousel item now renders without an "initial" animation. Implements feature request [92](https://github.com/Learus/mui-carousel-react/issues/92).
+  - "Enter" and "Exit" animations are now simultaneous. No flash/gap of background between slide changes. Fixes issues [20](https://github.com/Learus/react-material-ui-carousel/issues/20), [61](https://github.com/Learus/react-material-ui-carousel/issues/61), [66](https://github.com/Learus/react-material-ui-carousel/issues/66).
+  - The first carousel item now renders without an "initial" animation. Implements feature request [92](https://github.com/Learus/react-material-ui-carousel/issues/92).
   - **(Breaking)** The `timeout` prop is now `duration` and only supports a number that handles every aspect of the animation (enter, exit, e.t.c.)
-- **(Breaking)** Now renders (preloads) all items initially **and does not rerender** them, unless there has been a state change. Implements feature request [88](https://github.com/Learus/mui-carousel-react/issues/88) ([@Learus])
+- **(Breaking)** Now renders (preloads) all items initially **and does not rerender** them, unless there has been a state change. Implements feature request [88](https://github.com/Learus/react-material-ui-carousel/issues/88) ([@Learus])
 - **(Breaking)** `CarouselStyleProps` &#8594; `CarouselNavProps` ([@Learus])
-- Updated the [Demo page](https://learus.github.io/mui-carousel-react) look.
+- Updated the [Demo page](https://learus.github.io/react-material-ui-carousel) look.
 
 ### Fixed
 
-- `findDOMNode is deprecated in StrictMode.` warning has now been fixed. Material UI animations are no longer being used. [Issue.](https://github.com/Learus/mui-carousel-react/issues/32) ([@Learus])
-- `Can't perform a React state update on an unmounted component.` warning has now been fixed. [Issue.](https://github.com/Learus/mui-carousel-react/issues/44) ([@Learus])
+- `findDOMNode is deprecated in StrictMode.` warning has now been fixed. Material UI animations are no longer being used. [Issue.](https://github.com/Learus/react-material-ui-carousel/issues/32) ([@Learus])
+- `Can't perform a React state update on an unmounted component.` warning has now been fixed. [Issue.](https://github.com/Learus/react-material-ui-carousel/issues/44) ([@Learus])
 
 ### Removed
 
@@ -94,11 +100,11 @@ In general, its usage does not change.
 
 ### Fixed
 
-- Added fullHeightHoverButton class to styles, to fix `property does not exist` error. [Issue.](https://github.com/Learus/mui-carousel-react/issues/110) ([@Learus])
+- Added fullHeightHoverButton class to styles, to fix `property does not exist` error. [Issue.](https://github.com/Learus/react-material-ui-carousel/issues/110) ([@Learus])
 
 ### Changed
 
-- Removed unnecessary ternary operators. [Issue.](https://github.com/Learus/mui-carousel-react/issues/111) ([@Learus])
+- Removed unnecessary ternary operators. [Issue.](https://github.com/Learus/react-material-ui-carousel/issues/111) ([@Learus])
 
 ## [2.3.1] - _August 15 2021_
 
@@ -214,6 +220,7 @@ In general, its usage does not change.
 
 [Keep a Changelog]: https://keepachangelog.com/
 [Semantic Versioning]: https://semver.org/
+[@gazi786]: https://github.com/gazi786
 [@Learus]: https://github.com/Learus
 [@matyas-igor]: https://github.com/matyas-igor
 [@8BitAron]: https://github.com/8BitAron
